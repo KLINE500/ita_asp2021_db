@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <ul>
+        <li><a asp-controller="People" asp-action="Index">動作確認</a></li>
+        <li><a asp-controller="People" asp-action="FindByName">名前検索</a></li>
+        <li><a asp-controller="People" asp-action="FindByAge">年齢検索</a></li>
+        <li><a asp-controller="People" asp-action="FindByAgeRange">年齢範囲検索</a></li>
+    </ul>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

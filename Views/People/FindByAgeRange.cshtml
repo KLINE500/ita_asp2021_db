@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EntitySampleApp.Models.Person>
+
+@{
+    ViewData["Title"] = "FindByAgeRange";
+}
+
+
+<h1>FindByAgeRange</h1>
+
+
+<form asp-controller="People" asp-action="FindByAgeRange">
+    <div class="row">
+        <input type="text" name="lowAge" class="col-10 form-control" />
+        <input type="text" name="highAge" class="col-10 form-control" />
+        <input type="submit" value="Find" class="col-2 btn btn-primary" />
+    </div>
+</form>
+
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>PersonId</th>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
